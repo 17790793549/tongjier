@@ -1,0 +1,13 @@
+1.gouwuche
+
+ create table gwc1( love varchar(45) not null unique, zk int not null, yw varchar(45));
+ insert into gwc1(love,zk,yw) values ("xiaoxiong",8,"keai"),("xiaoche",7,"haowan"),("beibao",9,"shiyong");
+update gwc1 set yw="pianyi" where zk<8;
+delete from gwc1 where zk>8;
+
+2.quchong max
+
+select * from emp where emp.empno not in (select min(empno)  from emp group by sal having count(sal)>1);
+
+
+
