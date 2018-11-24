@@ -1,0 +1,166 @@
+1.
+mysql> create table shoucang(
+    -> id int primary key not null auto_increment,
+    -> name varchar(45));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into shoucang(id,name) values
+    -> (1,"wanju"),
+    -> (2,"leishejianpan"),
+    -> (3,"leisheshubiao"),
+    -> (4,"shouji");
+Query OK, 4 rows affected (0.03 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from shoucang;
++----+---------------+
+| id | name          |
++----+---------------+
+|  1 | wanju         |
+|  2 | leishejianpan |
+|  3 | leisheshubiao |
+|  4 | shouji        |
++----+---------------+
+4 rows in set (0.01 sec)
+mysql> delete from shoucang where name = "shouji";
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from shoucang;
++----+---------------+
+| id | name          |
++----+---------------+
+|  1 | wanju         |
+|  2 | leishejianpan |
+|  3 | leisheshubiao |
++----+---------------+
+3 rows in set (0.00 sec)
+
+mysql> select name from shoucang;
++---------------+
+| name          |
++---------------+
+| wanju         |
+| leishejianpan |
+| leisheshubiao |
++---------------+
+3 rows in set (0.00 sec)
+
+
+
+
+
+2.
+mysql> create table dianying( id int primary key not null auto_increment, name varchar(45) not null, nianfen int, daoyan varchar(45), pingfen int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into dianying(id,name,nianfen,daoyan,pingfen) values
+    -> (1,"handoutegong",2003,"Peter Howit",8.8);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from dianying;
++----+--------------+---------+-------------+---------+
+| id | name         | nianfen | daoyan      | pingfen |
++----+--------------+---------+-------------+---------+
+|  1 | handoutegong |    2003 | Peter Howit |       9 |
++----+--------------+---------+-------------+---------+
+1 row in set (0.00 sec)
+
+mysql> insert into dianying(id,name,nianfen,daoyan,pingfen) values (2,"taoxueweilong",1991,"chenjiashang",7),(3,"yilushenfeng",2013,"yeweimen",8);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from dianying;                                                                                                       +----+---------------+---------+--------------+---------+
+| id | name          | nianfen | daoyan       | pingfen |
++----+---------------+---------+--------------+---------+
+|  1 | handoutegong  |    2003 | Peter Howit  |       9 |
+|  2 | taoxueweilong |    1991 | chenjiashang |       7 |
+|  3 | yilushenfeng  |    2013 | yeweimen     |       8 |
++----+---------------+---------+--------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from dianying where name like "%taoxue%";
++----+---------------+---------+--------------+---------+
+| id | name          | nianfen | daoyan       | pingfen |
++----+---------------+---------+--------------+---------+
+|  2 | taoxueweilong |    1991 | chenjiashang |       7 |
++----+---------------+---------+--------------+---------+
+1 row in set (0.03 sec)
+
+mysql> select * from dianying where daoyan like "%wei%";
++----+--------------+---------+----------+---------+
+| id | name         | nianfen | daoyan   | pingfen |
++----+--------------+---------+----------+---------+
+|  3 | yilushenfeng |    2013 | yeweimen |       8 |
++----+--------------+---------+----------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from dianying where nianfen = 2003;
++----+--------------+---------+-------------+---------+
+| id | name         | nianfen | daoyan      | pingfen |
++----+--------------+---------+-------------+---------+
+|  1 | handoutegong |    2003 | Peter Howit |       9 |
++----+--------------+---------+-------------+---------+
+1 row in set (0.01 sec)
+
+mysql> select * from dianying where pingfen >= 8;
++----+--------------+---------+-------------+---------+
+| id | name         | nianfen | daoyan      | pingfen |
++----+--------------+---------+-------------+---------+
+|  1 | handoutegong |    2003 | Peter Howit |       9 |
+|  3 | yilushenfeng |    2013 | yeweimen    |       8 |
++----+--------------+---------+-------------+---------+
+2 rows in set (0.00 sec)
+
+
+
+
+
+3.
+mysql> show tables;
++-----------------+
+| Tables_in_hello |
++-----------------+
+| countries       |
+| departments     |
+| dept            |
+| dianying        |
+| emp             |
+| employees       |
+| job_history     |
+| jobs            |
+| locations       |
+| regions         |
+| salgrade        |
+| shoucang        |
+| years           |
+| yonghu          |
++-----------------+
+14 rows in set (0.00 sec)
+
+mysql> select * from yonghu;
++----+------------+---------------------+---------+
+| id | name       | denglu              | fangshi |
++----+------------+---------------------+---------+
+|  1 | zhangsan   | 2018-05-12 12:12:12 | ipad    |
+|  2 | lisi       | 2018-11-21 01:01:02 | pc      |
+|  3 | wangermazi | 2018-11-15 14:25:59 | app     |
++----+------------+---------------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select case when abs(datediff(denglu,now()))>30 then "niqusiba" when abs(datediff(denglu,now()))>9 then "nitemedehiubuhuilai" when abs(datediff(denglu,now()))>7 then "xiaotiancaikuaihuilai" end from yonghu;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| case when abs(datediff(denglu,now()))>30 then "niqusiba" when abs(datediff(denglu,now()))>9 then "nitemedehiubuhuilai" when abs(datediff(denglu,now()))>7 then "xiaotiancaikuaihuilai" end |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| niqusiba                                                                                                                                                                                   |
+| NULL                                                                                                                                                                                       |
+| xiaotiancaikuaihuilai                                                                                                                                                                      |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+3 rows in set (0.03 sec)
+
+
+
+4.
+delete from emp where emp.empno in (select min(empno) from emp group by sal having count(sal)>1);
+
+
+
