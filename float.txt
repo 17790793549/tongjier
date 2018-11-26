@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page By Joker</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <style>
+        .div1 {
+
+            border-left: 1px solid gray;
+            border-top: 1px solid red;
+            border-right: 1px solid gray;
+            font-size: 28px;
+        }
+
+        .div2 {
+            width: 150px;
+
+            border-top: 1px solid orange;
+            border-right: 1px solid gray;
+
+        }
+
+        .div3 {
+            width: 200px;
+
+            border-top: 1px solid orangered;
+            border-right: 1px solid gray;
+
+        }
+
+        .div4 {
+            width: 150px;
+
+            border-top: 1px solid blue;
+            border-right: 1px solid gray;
+
+        }
+
+        .div5 {
+            width: 150px;
+
+            border-top: 1px solid greenyellow;
+            border-right: 1px solid gray;
+
+        }
+
+        .div6 {
+            width: 150px;
+
+            border-top: 1px solid purple;
+            border-right: 1px solid gray;
+
+        }
+
+        .div7 {
+
+            width: 150px;
+            border-top: 1px solid deeppink;
+            border-right: 1px solid gray;
+
+        }
+
+        div {
+            float: left;
+        }
+
+        div h2 {
+
+            text-align: center;
+            vertical-align: middle;
+        }</style>
+</head>
+<body>
+
+
+<div class="div1">
+    <h2 class="fa fa-home" style="color: green"></h2>
+</div>
+
+<div class="div2">
+    <h2>FEATURES</h2>
+</div>
+
+<div class="div3">
+    <h2>TECHNOLOGY</h2>
+</div>
+
+<div class="div4">
+    <h2>BUSINESS</h2>
+</div>
+
+<div class="div5">
+    <h2>TRAVEL</h2>
+</div>
+
+<div class="div6">
+    <h2>BEAUTY</h2>
+</div>
+
+<div class="div7">
+    <h2>REVIEWS</h2>
+</div>
+
+
+</body>
+</html>
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 50px;
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-top: 4%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="div" style="padding-top: 3%;padding-bottom: 1%;border-top:3px solid red;border-right:1px solid grey">
+    <i class="fa fa-home" style="color: #00bc00;font-size: 40px"></i>
+</div>
+<div class="div" style="border-top:3px solid yellow;border-right:1px solid grey">FEATURES</div>
+<div class="div" style="border-top:3px solid red;border-right:1px solid grey">TECHNOLOGY</div>
+<div class="div" style="border-top:3px solid blue;border-right:1px solid grey">BUSINESS</div>
+<div class="div" style="border-top:3px solid blue;border-right:1px solid grey">TRAVEL</div>
+<div class="div" style="border-top:3px solid palevioletred;border-right:1px solid grey">BEAUTY</div>
+<div class="div" style="border-top:3px solid red;border-right:1px solid grey">REVIEWS</div>
+
+
+
+
+
+</body>
+</html>
